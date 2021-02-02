@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginViewController">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -54,7 +54,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hky-SF-bnO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="9sz-3E-Wwv"/>
                             <constraint firstItem="EQl-ae-aZA" firstAttribute="top" secondItem="prv-HC-gVG" secondAttribute="bottom" constant="37" id="Rsv-Tv-XVG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hky-SF-bnO" secondAttribute="trailing" constant="16" id="VdQ-DD-hIz"/>
                             <constraint firstItem="prv-HC-gVG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YPj-Ff-3fY"/>
@@ -70,8 +69,46 @@
             </objects>
             <point key="canvasLocation" x="-204.375" y="83.450704225352112"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="B3O-Fo-xJ0">
+            <objects>
+                <viewController id="7PX-hR-c24" sceneMemberID="viewController">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="Fjg-LG-msz" customClass="WelcomeViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
+                                <rect key="frame" x="84" y="166" width="152" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K4-sf-jGe">
+                                <rect key="frame" x="138" y="266" width="44" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aqq-BR-B7r"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="aqq-BR-B7r" firstAttribute="trailing" secondItem="mpb-eF-OOy" secondAttribute="trailing" constant="84" id="Ded-3h-44s"/>
+                            <constraint firstItem="4K4-sf-jGe" firstAttribute="centerY" secondItem="Fjg-LG-msz" secondAttribute="centerY" id="JqM-vE-SUS"/>
+                            <constraint firstItem="4K4-sf-jGe" firstAttribute="centerX" secondItem="Fjg-LG-msz" secondAttribute="centerX" id="gRU-yY-hMx"/>
+                            <constraint firstItem="4K4-sf-jGe" firstAttribute="top" secondItem="mpb-eF-OOy" secondAttribute="bottom" constant="73.5" id="hF6-Bu-Ueo"/>
+                            <constraint firstItem="mpb-eF-OOy" firstAttribute="leading" secondItem="aqq-BR-B7r" secondAttribute="leading" constant="84" id="o7Y-VB-TAe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahb-th-2gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583.125" y="83.450704225352112"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
