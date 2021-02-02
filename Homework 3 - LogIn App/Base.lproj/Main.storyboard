@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginViewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -43,10 +43,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JQ-dw-v4B">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                         <state key="normal" title="Forgot username?"/>
+                                        <connections>
+                                            <action selector="forgotUsernameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALm-iO-EEX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-ef-uhj">
                                         <rect key="frame" x="165" y="0.0" width="123" height="30"/>
                                         <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="forgotPasswordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95g-ym-9Lp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -69,11 +75,11 @@
             </objects>
             <point key="canvasLocation" x="-204.375" y="83.450704225352112"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome User View Controller-->
         <scene sceneID="B3O-Fo-xJ0">
             <objects>
-                <viewController id="7PX-hR-c24" sceneMemberID="viewController">
-                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="Fjg-LG-msz" customClass="WelcomeViewController">
+                <viewController id="7PX-hR-c24" customClass="WelcomeUserViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="Fjg-LG-msz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
