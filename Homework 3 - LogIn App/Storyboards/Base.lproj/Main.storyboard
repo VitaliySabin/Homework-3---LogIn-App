@@ -56,8 +56,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcM-83-Gza"/>
-                                    <segue destination="7PX-hR-c24" kind="presentation" modalPresentationStyle="fullScreen" id="pqT-US-1vH"/>
+                                    <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="23e-06-6Jt"/>
+                                    <segue destination="7PX-hR-c24" kind="presentation" identifier="showWelcomeUserVC" modalPresentationStyle="fullScreen" id="pqT-US-1vH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,7 +90,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
                                 <rect key="frame" x="84" y="166" width="152" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -101,7 +101,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LogOut"/>
                                 <connections>
-                                    <action selector="logOutAction:" destination="7PX-hR-c24" eventType="touchUpInside" id="L30-Y7-ZQg"/>
                                     <segue destination="FlN-f0-Jh3" kind="unwind" unwindAction="unwindWithSegue:" id="cve-P9-4P0"/>
                                 </connections>
                             </button>

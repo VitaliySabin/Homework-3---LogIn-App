@@ -8,30 +8,27 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+    
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    private let userName = "Alexey"
+    private let password = "discoman"
     
-    override func prepare(for segue: UIStoryboardSegue,
-                          sender: Any?) {
-        guard let welcomeUserVC = segue.destination
-                as? WelcomeUserViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeUserVC = segue.destination as? WelcomeUserViewController
         else {return}
-        welcomeUserVC.userName = usernameTextField.text
+        welcomeUserVC.userName = userName
     }
    
-    @IBAction func loginAction(_ sender: UIButton) {
-        if usernameTextField.text != "Alexey" ||
-           passwordTextField.text != "discoman" {
-            showAlert(with: "Wrong username or password!",
-                      and: "Try again!")
+    @IBAction func logInAction() {
+        if usernameTextField.text != userName || passwordTextField.text != password {
+            showAlert(with: "Wrong username or password!", and: "Try again!")
             passwordTextField.text = nil
+            return
         }
+        
+        performSegue(withIdentifier: "showWelcomeUserVC", sender: nil)
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
@@ -41,12 +38,12 @@ class LogInViewController: UIViewController {
     
     @IBAction func forgotUsernameAction(_ sender: UIButton) {
         showAlert(with: "Wrong username!",
-                  and: "Alexey, your username is 'Alexey'")
+                  and: "Alexey, your username is \(userName)")
     }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
         showAlert(with: "Wrong password!",
-                  and: "Alexey, your password is 'discoman'")
+                  and: "Alexey, your password is \(password)")
     }
 }
 extension LogInViewController {
@@ -58,5 +55,21 @@ extension LogInViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+extension LogInViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            logInAction()
+        }
+        return true
     }
 }

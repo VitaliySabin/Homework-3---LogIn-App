@@ -58,16 +58,48 @@
 		685C1A5B25C97E0200058999 /* Homework 3 - LogIn App */ = {
 			isa = PBXGroup;
 			children = (
-				685C1A5C25C97E0200058999 /* AppDelegate.swift */,
-				685C1A5E25C97E0200058999 /* SceneDelegate.swift */,
-				685C1A6225C97E0200058999 /* Main.storyboard */,
-				685C1A7725C9A00E00058999 /* LogInViewController.swift */,
-				685C1A7425C99ED500058999 /* WelcomeUserViewController.swift */,
-				685C1A6525C97E0400058999 /* Assets.xcassets */,
-				685C1A6725C97E0400058999 /* LaunchScreen.storyboard */,
-				685C1A6A25C97E0400058999 /* Info.plist */,
+				68C4511025CED3E300A898BF /* ViewControllers */,
+				68C4511225CED3FD00A898BF /* Storyboards */,
+				68C4511325CED43900A898BF /* Supporting files */,
+				68C4511525CED44F00A898BF /* Resourses */,
 			);
 			path = "Homework 3 - LogIn App";
+			sourceTree = "<group>";
+		};
+		68C4511025CED3E300A898BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				685C1A7725C9A00E00058999 /* LogInViewController.swift */,
+				685C1A7425C99ED500058999 /* WelcomeUserViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		68C4511225CED3FD00A898BF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				685C1A6225C97E0200058999 /* Main.storyboard */,
+				685C1A6725C97E0400058999 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		68C4511325CED43900A898BF /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				685C1A5C25C97E0200058999 /* AppDelegate.swift */,
+				685C1A5E25C97E0200058999 /* SceneDelegate.swift */,
+				685C1A6A25C97E0400058999 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		68C4511525CED44F00A898BF /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				685C1A6525C97E0400058999 /* Assets.xcassets */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Homework 3 - LogIn App/Info.plist";
+				INFOPLIST_FILE = "Homework 3 - LogIn App/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Homework 3 - LogIn App/Info.plist";
+				INFOPLIST_FILE = "Homework 3 - LogIn App/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
