@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-SF-bnO">
-                                <rect key="frame" x="16" y="136" width="288" height="90"/>
+                                <rect key="frame" x="16" y="95" width="288" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-ww-bdk">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
@@ -32,17 +32,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prv-HC-gVG">
-                                <rect key="frame" x="133" y="266" width="54" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcM-83-Gza"/>
-                                    <segue destination="7PX-hR-c24" kind="show" id="pqT-US-1vH"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="EQl-ae-aZA">
-                                <rect key="frame" x="16" y="339" width="288" height="30"/>
+                                <rect key="frame" x="16" y="269" width="288" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JQ-dw-v4B">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
@@ -60,18 +51,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prv-HC-gVG">
+                                <rect key="frame" x="133" y="209" width="54" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcM-83-Gza"/>
+                                    <segue destination="7PX-hR-c24" kind="presentation" modalPresentationStyle="fullScreen" id="pqT-US-1vH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EQl-ae-aZA" firstAttribute="top" secondItem="prv-HC-gVG" secondAttribute="bottom" constant="37" id="Rsv-Tv-XVG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hky-SF-bnO" secondAttribute="trailing" constant="16" id="VdQ-DD-hIz"/>
+                            <constraint firstItem="EQl-ae-aZA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XQf-L5-nVc"/>
                             <constraint firstItem="prv-HC-gVG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YPj-Ff-3fY"/>
                             <constraint firstItem="Hky-SF-bnO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ygf-sO-BfC"/>
-                            <constraint firstItem="EQl-ae-aZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="crq-sF-3qQ"/>
-                            <constraint firstItem="prv-HC-gVG" firstAttribute="top" secondItem="Hky-SF-bnO" secondAttribute="bottom" constant="40" id="fSl-8d-cKZ"/>
-                            <constraint firstItem="prv-HC-gVG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ucc-c8-ZcC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQl-ae-aZA" secondAttribute="trailing" constant="16" id="xsa-pU-u4h"/>
+                            <constraint firstItem="prv-HC-gVG" firstAttribute="top" secondItem="Hky-SF-bnO" secondAttribute="bottom" constant="24" id="fSl-8d-cKZ"/>
+                            <constraint firstItem="EQl-ae-aZA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iQh-Dp-X4a"/>
+                            <constraint firstItem="EQl-ae-aZA" firstAttribute="top" secondItem="prv-HC-gVG" secondAttribute="bottom" constant="24" id="x8w-jE-3oa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -88,17 +87,17 @@
             <objects>
                 <viewController id="7PX-hR-c24" customClass="WelcomeUserViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="Fjg-LG-msz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
-                                <rect key="frame" x="84" y="156" width="152" height="26.5"/>
+                                <rect key="frame" x="84" y="166" width="152" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K4-sf-jGe">
-                                <rect key="frame" x="127" y="256" width="66" height="36"/>
+                                <rect key="frame" x="127" y="266" width="66" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LogOut"/>
                                 <connections>
