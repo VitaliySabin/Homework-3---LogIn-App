@@ -23,7 +23,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-ww-bdk">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="omM-Pg-mdJ"/>
                                         </connections>
@@ -63,7 +63,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="23e-06-6Jt"/>
-                                    <segue destination="7PX-hR-c24" kind="presentation" identifier="showWelcomeUserVC" modalPresentationStyle="fullScreen" id="pqT-US-1vH"/>
+                                    <segue destination="rHg-7r-Wh9" kind="presentation" identifier="showWelcomeUserVC" modalPresentationStyle="fullScreen" id="pqT-US-1vH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="-204.375" y="83.450704225352112"/>
         </scene>
-        <!--Welcome User View Controller-->
+        <!--Vitaliy Sabin-->
         <scene sceneID="B3O-Fo-xJ0">
             <objects>
                 <viewController id="7PX-hR-c24" customClass="WelcomeUserViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-eF-OOy">
                                 <rect key="frame" x="84" y="166" width="152" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -121,6 +121,7 @@
                             <constraint firstItem="mpb-eF-OOy" firstAttribute="leading" secondItem="aqq-BR-B7r" secondAttribute="leading" constant="84" id="o7Y-VB-TAe"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Vitaliy Sabin" image="person" catalog="system" id="2Km-N4-nPQ"/>
                     <navigationItem key="navigationItem" id="tuc-78-olt"/>
                     <connections>
                         <outlet property="welcomeUserLabel" destination="mpb-eF-OOy" id="UeT-VW-TfF"/>
@@ -129,10 +130,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahb-th-2gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="FlN-f0-Jh3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="1393" y="83"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vNN-Ux-x4D">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rHg-7r-Wh9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fp5-6M-PHg">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7PX-hR-c24" kind="relationship" relationship="viewControllers" id="XoT-Pu-Ng7"/>
+                        <segue destination="ckb-Rn-36v" kind="relationship" relationship="viewControllers" id="cXx-1K-WNF"/>
+                        <segue destination="BxS-Fu-YE8" kind="relationship" relationship="viewControllers" id="YUK-66-4zl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSK-Sm-owL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="583.125" y="83.450704225352112"/>
+        </scene>
+        <!--Resume-->
+        <scene sceneID="YrP-oG-Jeq">
+            <objects>
+                <viewController id="ckb-Rn-36v" customClass="ResumeViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pld-Tr-yd3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf9-A0-uOV">
+                                <rect key="frame" x="130.5" y="16" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1564307781700.jpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJj-yX-XqT">
+                                <rect key="frame" x="16" y="66.5" width="288" height="435"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="e1T-Zh-bzY"/>
+                                    <constraint firstAttribute="height" constant="435" id="qxD-C6-emF"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J00-Ho-NTJ"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="uJj-yX-XqT" firstAttribute="centerY" secondItem="Pld-Tr-yd3" secondAttribute="centerY" id="Pxu-iO-64W"/>
+                            <constraint firstItem="bf9-A0-uOV" firstAttribute="top" secondItem="J00-Ho-NTJ" secondAttribute="top" constant="16" id="Wvp-64-XUh"/>
+                            <constraint firstItem="bf9-A0-uOV" firstAttribute="centerX" secondItem="Pld-Tr-yd3" secondAttribute="centerX" id="kDN-gy-wim"/>
+                            <constraint firstItem="uJj-yX-XqT" firstAttribute="centerX" secondItem="Pld-Tr-yd3" secondAttribute="centerX" id="yR4-he-BUx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Resume" image="paperclip" catalog="system" id="msR-zf-e0n"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="bf9-A0-uOV" id="gaT-oc-qgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfq-hy-VTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="801.76056338028172"/>
+        </scene>
+        <!--More info-->
+        <scene sceneID="hK9-5L-M8M">
+            <objects>
+                <viewController id="BxS-Fu-YE8" customClass="MoreInfoViewController" customModule="Homework_3___LogIn_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRZ-RC-njM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-jp-k4C">
+                                <rect key="frame" x="130.5" y="16" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kSo-db-P4R"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="uLo-jp-k4C" firstAttribute="top" secondItem="kSo-db-P4R" secondAttribute="top" constant="16" id="Euo-sS-3KI"/>
+                            <constraint firstItem="uLo-jp-k4C" firstAttribute="centerX" secondItem="MRZ-RC-njM" secondAttribute="centerX" id="tP9-ri-DAD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More info" image="personalhotspot" catalog="system" id="S8C-df-nZa"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="uLo-jp-k4C" id="4l7-EU-Lu5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QpD-YE-PAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="802"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1564307781700.jpg" width="810" height="1080"/>
+        <image name="paperclip" catalog="system" width="121" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
