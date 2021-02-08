@@ -29,9 +29,6 @@ class LogInViewController: UIViewController {
                 moreInfoVC.user = "\(personPadawan.firstName) \(personPadawan.lastName)"
             } else {return}
         }
-//        guard let welcomeUserVC = segue.destination as? WelcomeUserViewController
-//        else {return}
-//        welcomeUserVC.userName = "\(personJedi.firstName) \(personJedi.lastName)"
     }
     
     @IBAction func logInAction() {
